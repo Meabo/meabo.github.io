@@ -597,7 +597,7 @@ $(document).ready(function() {
   /*	Newsletter Subscribe Form
 		/*----------------------------------------------------*/
 
-  $(".newsletter-form").ajaxChimp({
+  $(".register-form").ajaxChimp({
     language: "cm",
     url:
       "http://mc.us16.list-manage.com/subscribe/post?u=c98cf0b132a2c59ed2b6f470f&id=a4a29b79c9"

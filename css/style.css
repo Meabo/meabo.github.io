@@ -1514,8 +1514,8 @@ span.section-id {
 }
 
 #hero-4 {
-  background-color: rgb(5, 88, 196);
-  background-position: center bottom; 
+  background-image: url(../images/hero-6.jpg);
+    background-position: center bottom; 
   padding-top: 160px;
   padding-bottom: 160px;
 }

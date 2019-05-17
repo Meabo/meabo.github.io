@@ -4157,20 +4157,13 @@ nav a#pull {
 }
 
   .sectionspecial .diagram {
-    /* max-width: 940px; */
-    width: 80%;
+     max-width: 100%; 
     margin-left: auto;
     margin-right: auto;
   }
 
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .con {
-    height:0px;
-    visibility: hidden;
-  }
-}
+
 
 .sectionspecial .diagram img {
   width: 100%;
@@ -4285,6 +4278,66 @@ nav a#pull {
 {
   max-width:80%;
 }
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .sectionspecial .pin {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    border-radius: 35px;
+    box-sizing: border-box;
+    /* background-color: #DDD; */
+    border: 2px solid #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-animation-name: bobbingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: bobbing;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+
+  
+.sectionspecial .pinobject {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  border-radius: 70px;
+  box-sizing: border-box;
+  /* background-color: #DDD; */
+  border: 0px solid #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* animation: rotation 5s infinite linear; */
+}
+#pin7{
+  background-image: url(../images/chest_1.gif);
+  left: 44%;
+  right: 50%;
+  top: 45%;
+  }
+  #pin2 {
+    background-image: url(../images/avatar2.png);
+    left: 58%;
+    top: 45%;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
 .sectionspecial .pin {
   height: 75px;
   width: 75px;
@@ -4309,7 +4362,6 @@ nav a#pull {
   -moz-animation-timing-function: ease-in-out;
 }
 
-
 .sectionspecial .pinobject {
   height: 150px;
   width: 151px;
@@ -4326,7 +4378,20 @@ nav a#pull {
   background-size: contain;
   /* animation: rotation 5s infinite linear; */
 }
-
+#pin7 {
+  background-image: url(../images/chest_1.gif);
+  left: 46%;
+  right: 50%;
+  top: 35%;
+  }
+  #pin2 {
+    background-image: url(../images/avatar2.png);
+    left: 58%;
+    top: 18%;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+}
 
 @keyframes rotation {
   100%{
@@ -4347,13 +4412,7 @@ nav a#pull {
   to {-moz-transform: translate(0, -0px);}
 }
 
-#pin2 {
-  background-image: url(../images/avatar2.png);
-  left: 58%;
-  top: 18%;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
+
 #pin3{background-image: url(../images/avatar3.png);left: 65%;top: 50%;-webkit-animation-delay: 1s;animation-delay: 1s;}
 
 #pin4{
@@ -4367,13 +4426,7 @@ nav a#pull {
 #pin5{background-image: url(../images/avatar5.png);left: 35%;top: 50%;-webkit-animation-delay: 1s;animation-delay: 1s;}
 
 #pin6{background-image: url(../images/avatar11.png);left: 45%;top: 65%;-webkit-animation-delay: 1s;animation-delay: 1s;}
-#pin7{
-  background-image: url(../images/chest_1.gif);
-  width: 200px;
-  left: 46%;
-  right: 50%;
-  top: 35%;
-  }
+
   #pin8{background-image: url(../images/avatar7.png);left: 56%;top: 60%;-webkit-animation-delay: 1s;animation-delay: 1s;}
   #pin9{background-image: url(../images/avatar8.png);left: 54%;top: 30%;-webkit-animation-delay: 1s;animation-delay: 1s;}
   #pin10{background-image: url(../images/avatar9.png);left: 30%;top: 75%;-webkit-animation-delay: 1s;animation-delay: 1s;}

@@ -3,17 +3,17 @@ $(document).ready(function() {
   "use strict";
 
   $(".contact-form").submit(function(e) {
-    console.log("called contact");
     e.preventDefault();
-    var name = $(".name");
-    var email = $(".email");
-    var subject = $(".subject");
-    var msg = $(".message");
+    var name = $("#contact_name");
+    var email = $("#contact_email");
+    var subject = $("#inlineFormCustomSelect1");
+    var msg = $("#contact_message");
     var flag = false;
-    if (name.val() == "") {
+    if (name.val() === "") {
       name.closest(".form-control").addClass("error");
       name.focus();
       flag = false;
+
       return false;
     } else {
       name
@@ -21,7 +21,7 @@ $(document).ready(function() {
         .removeClass("error")
         .addClass("success");
     }
-    if (email.val() == "") {
+    if (email.val() === "") {
       email.closest(".form-control").addClass("error");
       email.focus();
       flag = false;
@@ -44,22 +44,20 @@ $(document).ready(function() {
         .addClass("success");
       flag = true;
     }
-    const dataString =
-      "name=" +
-      name.val() +
-      "&email=" +
-      email.val() +
-      "&subject=" +
-      subject.val() +
-      "&msg=" +
-      msg.val();
-    console.log(dataString);
+    const json = {
+      name: name.val(),
+      email: email.val(),
+      subject: subject.val(),
+      message: msg.val()
+    };
+    console.log("dataString", json);
     $(".loading")
       .fadeIn("slow")
       .html("Loading...");
+
     $.ajax({
       type: "POST",
-      data: dataString,
+      data: json,
       url: "https://us-central1-fir-8b1f3.cloudfunctions.net/sendMail",
       cache: false,
       success: function(d) {

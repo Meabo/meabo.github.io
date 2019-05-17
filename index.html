@@ -36,30 +36,7 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 
-<script type='text/javascript'>
-(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='NAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email'; /*
-  * Translated default messages for the $ validation plugin.
-  * Locale: FR
-  */
- $.extend($.validator.messages, {
-         required: "Ce champ est requis.",
-         remote: "Veuillez remplir ce champ pour continuer.",
-         email: "Veuillez entrer une adresse email valide.",
-         url: "Veuillez entrer une URL valide.",
-         date: "Veuillez entrer une date valide.",
-         dateISO: "Veuillez entrer une date valide (ISO).",
-         number: "Veuillez entrer un nombre valide.",
-         digits: "Veuillez entrer (seulement) une valeur numérique.",
-         creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
-         equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
-         accept: "Veuillez entrer une valeur avec une extension valide.",
-         maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
-         minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
-         rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
-         range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
-         max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
-         min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
- });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 
     <!-- FAVICON AND TOUCH ICONS  -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -753,11 +730,11 @@
 																							
 										<!-- Contact Form Input -->
 										<div id="input-name" class="col-lg-6">
-											<input type="text" name="name" class="form-control name" placeholder="Your Name*"> 
+											<input id='contact_name' type="text" name="name" class="form-control name" placeholder="Your Name*"> 
 										</div>
 													
 										<div id="input-email" class="col-lg-6">
-											<input type="text" name="email" class="form-control email" placeholder="Email Address*"> 
+											<input id='contact_email' type="text" name="email" class="form-control email" placeholder="Email Address*"> 
 										</div>
 															
 										<!-- Form Select -->
@@ -774,7 +751,7 @@
 										</div>
 													
 										<div id="input-message" class="col-lg-12 input-message">
-											<textarea class="form-control message" name="message" rows="6" placeholder="Your Message ..."></textarea>
+											<textarea id='contact_message' class="form-control message" name="message" rows="6" placeholder="Your Message ..."></textarea>
 										</div> 
 																							
 										<!-- Contact Form Button -->
@@ -911,18 +888,17 @@
 
       <!-- BOTTOM QUICK FORM
 			============================================= -->
-      <div id="quick-form">
+      <!--<div id="quick-form">
         <div class="bottom-form">
-          <!-- QUICK FORM HEADER -->
+         QUICK FORM HEADER 
           <div class="bottom-form-header">
             <span class="bg-coral"><i class="fas fa-envelope"></i></span>
             <p>Hello! How can I help you?</p>
           </div>
 
-          <!-- QUICK FORM -->
+        
           <div class="bottom-form-holder">
             <form name="contactform" class="quick-contact-form">
-              <!-- Contact Form Input -->
               <div id="bottom-input-name">
                 <input
                   type="text"
@@ -950,7 +926,6 @@
                 ></textarea>
               </div>
 
-              <!-- Contact Form Button -->
               <div class="m-top-15 form-btn text-right">
                 <button
                   type="submit"
@@ -962,10 +937,9 @@
                 </button>
               </div>
 
-              <!-- Contact Form Message -->
               <div class="contact-form-msg"><span class="loading"></span></div>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- END BOTTOM QUICK FORM -->
@@ -997,7 +971,7 @@
 
     <!-- Custom Script -->
     <script src="js/custom.js"></script>
-
+    
     <script>
       new WOW().init();
     </script>

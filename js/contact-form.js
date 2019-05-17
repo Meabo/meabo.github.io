@@ -3,6 +3,7 @@ $(document).ready(function() {
   "use strict";
 
   $(".contact-form").submit(function(e) {
+    console.log("called contact");
     e.preventDefault();
     var name = $(".name");
     var email = $(".email");
@@ -43,7 +44,7 @@ $(document).ready(function() {
         .addClass("success");
       flag = true;
     }
-    var dataString =
+    const dataString =
       "name=" +
       name.val() +
       "&email=" +
@@ -59,7 +60,7 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       data: dataString,
-      url: "php/contact.php",
+      url: "https://us-central1-fir-8b1f3.cloudfunctions.net/sendMail",
       cache: false,
       success: function(d) {
         $(".form-control").removeClass("success");

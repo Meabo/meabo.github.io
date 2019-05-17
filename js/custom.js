@@ -592,25 +592,4 @@ $(document).ready(function() {
 
     return false;
   });
-
-  /*----------------------------------------------------*/
-  /*	Newsletter Subscribe Form
-		/*----------------------------------------------------*/
-
-  $(".register-form").ajaxChimp({
-    language: "cm",
-    url:
-      "http://mc.us16.list-manage.com/subscribe/post?u=c98cf0b132a2c59ed2b6f470f&id=a4a29b79c9"
-    //http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-  });
-
-  $.ajaxChimp.translations.cm = {
-    submit: "Submitting...",
-    0: "We have sent you a confirmation email",
-    1: "Please enter your email address",
-    2: "An email address must contain a single @",
-    3: "The domain portion of the email address is invalid (the portion after the @: )",
-    4: "The username portion of the email address is invalid (the portion before the @: )",
-    5: "This email address looks fake or invalid. Please enter a real email address"
-  };
 });

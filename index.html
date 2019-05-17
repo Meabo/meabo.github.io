@@ -15,6 +15,52 @@
     <!-- SITE TITLE -->
     <title>Chase - Run and Get rewards</title>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBgZ386DqUMHhpbNCHjPqpBduPHFVG5iKA",
+    authDomain: "fir-8b1f3.firebaseapp.com",
+    databaseURL: "https://fir-8b1f3.firebaseio.com",
+    projectId: "fir-8b1f3",
+    storageBucket: "fir-8b1f3.appspot.com",
+    messagingSenderId: "663535367518",
+    appId: "1:663535367518:web:278b3977736127f1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script type='text/javascript'>
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='NAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email'; /*
+  * Translated default messages for the $ validation plugin.
+  * Locale: FR
+  */
+ $.extend($.validator.messages, {
+         required: "Ce champ est requis.",
+         remote: "Veuillez remplir ce champ pour continuer.",
+         email: "Veuillez entrer une adresse email valide.",
+         url: "Veuillez entrer une URL valide.",
+         date: "Veuillez entrer une date valide.",
+         dateISO: "Veuillez entrer une date valide (ISO).",
+         number: "Veuillez entrer un nombre valide.",
+         digits: "Veuillez entrer (seulement) une valeur numérique.",
+         creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+         equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+         accept: "Veuillez entrer une valeur avec une extension valide.",
+         maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+         minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
+         rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+         range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+         max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
+         min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+ });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
     <!-- FAVICON AND TOUCH ICONS  -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -68,6 +114,8 @@
 
     <!-- RESPONSIVE CSS -->
     <link href="css/responsive.css" rel="stylesheet" />
+    
+    
   </head>
 
   <body>
@@ -197,13 +245,14 @@
               <!-- Header Button -->
               <span class="navbar-text">
                 <a
-                  href="#contacts-2"
                   class="btn btn-tra-white tra-hover btn-arrow"
                 >
                   <span
                     >Pre-register <i class="fas fa-angle-double-right"></i
                   ></span>
                 </a>
+
+           
               </span>
             </div>
             <!-- End Navigation Menu -->
@@ -611,16 +660,20 @@
           </div>
           <!-- END SECTION TITLE -->
 
+            
           <!-- REGISTER FORM -->
           <div class="row">
             <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-              <div class="form-holder text-center">
-                <form name="registerform" class="row register-form">
+              <div class="form-holder text-center"  id="mc_embed_signup">
+
+
+                <form action="https://notyet.us16.list-manage.com/subscribe/post?u=c98cf0b132a2c59ed2b6f470f&amp;id=a4a29b79c9" method="POST"  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="row register-form validate"  target="_blank" novalidate>
                   <!-- Contact Form Input -->
+              
                   <div id="input-name" class="col-lg-12">
                     <input
                       type="text"
-                      name="name"
+                     name="MERGE1" id="MERGE1" size="25"
                       class="form-control name"
                       placeholder="Your Name*"
                     />
@@ -629,35 +682,36 @@
                   <div id="input-email" class="col-lg-12">
                     <input
                       type="text"
-                      name="email"
+                      name="MERGE0" 
+                      id="MERGE0" 
+                      size="25"
                       class="form-control email"
                       placeholder="Email Address*"
                     />
                   </div>
 
-                  <!-- Contact Form Button -->
+
                   <div class="col-lg-12 form-btn text-right">
-                    <button
-                      type="submit"
-                      class="btn btn-lg btn-blue submit btn-arrow"
-                    >
-                      <span
-					  >Pre-register
-                        <i class="fas fa-angle-double-right"></i
-                      ></span>
-                    </button>
-                  </div>
+                      <button type="submit" class="btn btn-lg btn-blue submit btn-arrow">
+                        <span>Pre-register
+                          <svg class="svg-inline--fa fa-angle-double-right fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg><!-- <i class="fas fa-angle-double-right"></i> --></span>
+                      </button>
+                    </div>
 
                   <!-- Small Text -->
-                  <p class="p-sm">
+                  <p class="p-sm col-lg-12">
                     We don’t share your personal information with anyone. We will publish
                     a <a href="" onclick="return false;">Privacy Policy</a> for more information
                   </p>
 
                   <!-- Contact Form Message -->
-                  <div class="col-lg-12 register-form-msg">
-                    <span class="loading"></span>
-                  </div>
+                  <div id="mce-responses" class="col-lg-12 register-form-msg ">
+                      <div class="response" id="mce-error-response" style="display:none">
+                        
+                      </div>
+                      <div class="response" id="mce-success-response" style="display:none">
+                      </div>
+                      </div>                  
                 </form>
               </div>
             </div>
@@ -921,12 +975,13 @@
     <!-- EXTERNAL SCRIPTS
 		============================================= -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/mc-validate.js"></script>
+    <script src="js/sweetalert2@8.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fontawesome-all.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/wow.js"></script>
-    <script src="js/retina.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.scrollto.js"></script>
     <script src="js/jquery.appear.js"></script>
@@ -939,7 +994,6 @@
     <script src="js/quick-form.js"></script>
     <script src="js/comment-form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
 
     <!-- Custom Script -->
     <script src="js/custom.js"></script>

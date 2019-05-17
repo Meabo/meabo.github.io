@@ -4587,3 +4587,56 @@ nav a#pull {
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
+
+p.foo-email a {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#footer-1 .footer-info p, #footer-2 .footer-info p, #footer-4 .footer-info p {
+  font-weight: 400;
+  margin-bottom: 3px;
+}
+
+.foo-socials {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0 auto 0;
+}
+
+.foo-socials li {
+  width: auto!important;
+  display: inline-block!important;
+  vertical-align: top;
+  clear: none!important;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.foo-socials a {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #666;
+  width: 36px;
+  height: 36px;
+  color: #666;
+  font-size: 16px;
+  line-height: 34px!important;
+  margin-right: 4px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+.fa, .fab, .fal, .far, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}

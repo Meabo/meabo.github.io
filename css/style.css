@@ -4281,8 +4281,8 @@ nav a#pull {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .sectionspecial .pin {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     position: absolute;
     left: 0;
     top: 0;
@@ -4565,7 +4565,7 @@ nav a#pull {
   margin-top: 100px;
 }
 
-.specialh2{
+.specialh2 {
   font-weight: 500;
   font-size: 40px;
   color: #fff;
@@ -4586,6 +4586,7 @@ nav a#pull {
 
   font-family: 'Roboto', sans-serif;
   text-align: center;
+}
 }
 
 p.foo-email a {
@@ -4639,4 +4640,13 @@ p.foo-email a {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
 }

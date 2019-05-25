@@ -45,7 +45,54 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 
+<script>
+  window.onload = function(){
+  
+    $.ajax({
+      type: "GET",
+      url: 'https://us-central1-fir-8b1f3.cloudfunctions.net/countContacts',
+      cache: false,
+      crossDomain: true,
+      dataType   : 'json',
 
+      beforeSend: function(xhr) {
+         xhr.setRequestHeader('Access-Control-Allow-Origin', 'true');
+        },
+      success: function(d) {
+        document.getElementById('numberofregisters').innerHTML = d;
+
+      }})
+  };
+
+  function addContact()
+  {
+    console.log('addContact Called');
+    var name = $("#MERGE1");
+    var email = $("#MERGE0");
+    const json = {
+      name: name.val(),
+      email: email.val(),
+    };
+
+    $.ajax({
+      type: "POST",
+      data: json,
+      url: 'https://us-central1-fir-8b1f3.cloudfunctions.net/addContact',
+      cache: false,
+      crossDomain: true,
+      dataType   : 'json',
+
+      beforeSend: function(xhr) {
+         xhr.setRequestHeader('Access-Control-Allow-Origin', 'true');
+        },
+      success: function(d) {
+        console.log(d);
+        console.log('success?')
+
+      }})
+  }
+
+  </script>
 
     <!-- FAVICON AND TOUCH ICONS  -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -229,11 +276,11 @@
               <!-- Header Button -->
               <span class="navbar-text">
                 <a
-                  href="#contacts-2"
+                  href="#contacts-1"
                   class="btn btn-tra-white tra-hover btn-arrow"
                 >
                   <span
-                    >Pre-register <i class="fas fa-angle-double-right"></i
+                    >Contact us <i class="fas fa-angle-double-right"></i
                   ></span>
                 </a>
 
@@ -277,29 +324,56 @@
                   Get Rewards.
                 </h2>
                 <!-- Text -->
-                <p class="p-md wow fadeInUp" data-wow-delay="0.5s">
-                 Discover the next-gen of running geolocalised game and challenge chasers in real life!
+                <p class="p-md wow fadeInUp mb-20" data-wow-delay="0.5s">
+                 Discover the next-gen of running geolocalised game and join <b id="numberofregisters"></b> Chasers already pre-registered:
                 </p>
 
+              
+                    <div class="form-holder hero-txt text-center "  id="mc_embed_signup">
                 <!-- Modal Video Link -->
-           	<!-- STORE BADGES -->												
-								<div class="stores-badge wow fadeInUp" data-wow-delay="0.8s">
+                <form action="https://notyet.us16.list-manage.com/subscribe/post?u=c98cf0b132a2c59ed2b6f470f&amp;id=a4a29b79c9" method="POST"  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="row register-form validate"  target="_blank" novalidate>
+                  <!-- Contact Form Input -->
+              
+                  <div id="input-name" class="col-lg-5">
+                    <input
+                      type="text"
+                     name="MERGE1" id="MERGE1" size="25"
+                      class="form-control name"
+                      placeholder="Your Name*"
+                    />
+                  </div>
 
-										<!-- AppStore -->
-										<a
-										href="#map"
-										class="btn btn-tra-white tra-hover btn-arrow"
-									  >
-										<span
-										  >Learn more<i class="fas fa-angle-double-right"></i
-										></span>
-									  </a>
-														
-									
-							
-														
-									</div>	<!-- END STORE BADGES -->
-	
+                  <div id="input-email" class="col-lg-5">
+                    <input
+                      type="text"
+                      name="MERGE0" 
+                      id="MERGE0" 
+                      size="25"
+                      class="form-control email"
+                      placeholder="Email Address*"
+                    />
+                  </div>
+
+             
+                  <div class="col-lg-10 form-btn text-right">
+                      <button type="submit" onclick="addContact()" class="btn btn-lg btn-blue submit btn-arrow">
+                        <span>Pre-register
+                          <svg class="svg-inline--fa fa-angle-double-right fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg><!-- <i class="fas fa-angle-double-right"></i> --></span>
+                      </button>
+                    </div>
+                   
+                  <!-- Small Text -->
+               
+                  <!-- Contact Form Message -->
+                  <div id="mce-responses" class="col-lg-10 register-form-msg ">
+                      <div class="response" id="mce-error-response" style="display:none">
+                        
+                      </div>
+                      <div class="response" id="mce-success-response" style="display:none">
+                      </div>
+                      </div>                  
+                </form>
+                  </div>
               </div>
             </div>
             <!-- END HERO TEXT -->
@@ -678,7 +752,7 @@
 
 
                   <div class="col-lg-12 form-btn text-right">
-                      <button type="submit" class="btn btn-lg btn-blue submit btn-arrow">
+                      <button type="submit" onclick="addContact()" class="btn btn-lg btn-blue submit btn-arrow">
                         <span>Pre-register
                           <svg class="svg-inline--fa fa-angle-double-right fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg><!-- <i class="fas fa-angle-double-right"></i> --></span>
                       </button>
